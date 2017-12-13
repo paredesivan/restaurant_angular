@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  overflow-x: hidden;
+}
+
+.dropdown {
+  margin-left: 600px !important;
+}
+
+li {
+  margin-left: 70px;
+}
+
+.login {
+  margin-top: 100px;
+}
+
+.input-group {
+  margin-top: 5px;
+}
+
+.btn {
+  cursor: pointer;
+}

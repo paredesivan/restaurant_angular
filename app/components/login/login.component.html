@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div class="card text-center login">
+      <div class="card-header">
+        Login
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+              <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+                <input class="form-control" type="text" placeholder="Email address" name="usuario" ngModel>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+                <input class="form-control" type="password" placeholder="Password" name="password" ngModel>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-sign-in fa-fw" aria-hidden="true"></i></span>
+                <button type="submit" class="btn btn-outline-primary btn-block">Ingresar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        Si no tiene cuenta por favor pongase en contacto con el administrador del sistema
+      </div>
+    </div>
+  </div>
+</div>
