@@ -15,7 +15,7 @@ const APP_ROUTES: Routes = [
   { path: 'productos', component: ProductosComponent, canActivate: [LoginGuard] },
   { path: 'reservas', component: ReservasComponent, canActivate: [LoginGuard] },
   { path: 'login', component: LoginComponent, canActivate: [LogoutGuard] },
-  { path: '**', pathMatch: 'full', redirectTo: 'reservas' }
+  { path: '**', pathMatch: 'full', redirectTo: 'login' }
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { useHash: true });

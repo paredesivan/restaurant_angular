@@ -10,13 +10,20 @@ export class MenuComponent implements OnInit {
 
   constructor(private ruta: Router) { }
 
+  public usuario: string;
+  public id: any;
   ngOnInit() {
+    this.usuario = localStorage.getItem('usuario');
+    this.id = localStorage.getItem('id');
   }
 
+
+
   salir() {
-    console.log('Salioooo...');
+    // console.log('Salioooo...');
 
     localStorage.removeItem('usuario');
+    localStorage.removeItem('idusuario');
     this.ruta.navigate(['/login']);
   }
 }
