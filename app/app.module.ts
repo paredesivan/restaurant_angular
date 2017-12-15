@@ -15,6 +15,7 @@ import { LogoutGuard } from './logout.guard';
 
 // servicios
 import { AdminService } from './servicios/admin.service';
+import { CategoriasService } from './servicios/categorias.service';
 
 HttpModule
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { VentasComponent } from './components/ventas/ventas.component';
 import { ReservasComponent } from './components/reservas/reservas.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
+import { EditCategoriaComponent } from './components/categorias/edit-categoria/edit-categoria.component';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { LoginComponent } from './components/login/login.component';
     ReservasComponent,
     AdminComponent,
     LoginComponent,
+    EditCategoriaComponent,
 
   ],
   imports: [
@@ -48,7 +51,8 @@ import { LoginComponent } from './components/login/login.component';
   providers: [
     LoginGuard,
     LogoutGuard,
-    AdminService
+    AdminService,
+    CategoriasService
   ],
   bootstrap: [AppComponent]
 })

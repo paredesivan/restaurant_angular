@@ -1,4 +1,39 @@
 <app-menu></app-menu>
-<p>
-  categorias works!
-</p>
+
+
+<div class="container top">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Categorías</li>
+    </ol>
+  </nav>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre de Categoría</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let cat of categorias">
+
+        <td>{{ cat.idcategoria}}</td>
+        <td>{{ cat.nombrecategoria}}</td>
+        <td>
+          <!-- <button (click)="editar({{cat.idcategoria}})" type="button" class="btn btn-outline-primary btn-sm">
+             Editar
+          </button> -->
+          <a class="btn btn-outline-primary btn-sm" routerLink="/editcategorias/{{ cat.idcategoria }}"> Editar</a>
+          <button (click)="borrarCat(cat.idcategoria)" type="button" class="btn btn-outline-danger btn-sm">
+             Borrar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

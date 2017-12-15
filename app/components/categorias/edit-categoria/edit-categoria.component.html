@@ -1,0 +1,40 @@
+<nav class="navbar  navbar-expand-lg navbar-dark bg-dark ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ">
+      <li class="nav-item active" routerLinkActive="actives">
+        <a class="nav-link " [routerLink]="['../../reservas']">Reservas</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['../../categorias']" [routerLinkActive]="['actives']">Categorias <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link active" [routerLink]="['../../productos']" routerLinkActive="actives">Productos</a>
+      </li>
+      <li class="nav-item active" routerLinkActive="actives">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hola!  <i class="fa fa-user"></i> {{ usuario }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a href="#" class="dropdown-item" (click)="salir()"><i class="fa fa-sign-out"></i>Salir</a>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container top">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Editar Categorías {{ model.nombrecategoria}}</li>{{ model.idcategoria}}
+    </ol>
+  </nav>
+
+</div>

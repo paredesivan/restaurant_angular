@@ -6,12 +6,15 @@ import { CategoriasComponent } from './components/categorias/categorias.componen
 import { ProductosComponent } from './components/productos/productos.component';
 import { ReservasComponent } from './components/reservas/reservas.component';
 
+import { EditCategoriaComponent } from './components/categorias/edit-categoria/edit-categoria.component';
+
 // guard para la sesion
 import { LoginGuard } from './login.guard';
 import { LogoutGuard } from './logout.guard';
 
 const APP_ROUTES: Routes = [
   { path: 'categorias', component: CategoriasComponent, canActivate: [LoginGuard] },
+  { path: 'editcategorias/:idcategoria', component: EditCategoriaComponent, canActivate: [LoginGuard] },
   { path: 'productos', component: ProductosComponent, canActivate: [LoginGuard] },
   { path: 'reservas', component: ReservasComponent, canActivate: [LoginGuard] },
   { path: 'login', component: LoginComponent, canActivate: [LogoutGuard] },
